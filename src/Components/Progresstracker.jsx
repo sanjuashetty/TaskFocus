@@ -7,10 +7,11 @@ export default function Progresstracker({tasks}) {
 
   return (
     <div className='progress-tracker'>
-
+      
+      <h4>
       <p>
         {completedTasks} of {totaltasks} tasks completed
-      </p>
+      </p></h4>
 
       <div className='progress-bar'>
 

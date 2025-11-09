@@ -26,16 +26,26 @@ export default function App() {
       settasks(tasks.filter((_, i) => i != index));
   }
 
+  const crearTask = () => {
+    settasks([]);
+  }
+
 
   return (
-    <div>
-      <h1>TaskFocus</h1>
-      <p>Our friendly Task_Manager</p>
+
+    <div className='body'>
+
+      <div className='body1'>
+      <h1 className='j'>TaskFocus</h1>
+      <h3>Our friendly Task_Manager</h3>
 
       <Taskform addTask = {addTask}/>
       <TaskList tasks = {tasks} updateTask = {updateTask} deleteTask = {deleteTask}/>
       <Progresstracker tasks = {tasks}/>
-      <button>Clear all task</button>
+      <button className='min' onClick={crearTask}>Clear all task</button>
     </div>
+      
+    </div>
+    
   )
 }
